@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 20px;
+}
+
+li {
+  display: inline;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+h4{
+    text-align: left;
+    padding-left: 20%;
+}
+</style>
+<body>
+<div class="nav-bar">
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/upload">Upload</a></li>
+        <li><a href="/live">Live Speak</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</div>
+    <h4>{{ contents|linebreaks }}</h4>
+</body>
+</html>

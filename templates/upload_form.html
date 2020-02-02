@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <h1>Lazy Coding</h1>
+  <head>
+    <link rel="stylesheet" href="front_end.css">
+  </head>
+  <style>
+ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 20px;
+  right: 20px;
+}
+
+li {
+  display: inline;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  position: fixed;
+  top: 200px;
+  right: 600px;
+  color: white;
+}
+#soundFile {
+  position: fixed;
+  top: 380px;
+  right: 550px;
+  font-size: 20px;
+
+  background-color: gray;
+  color: white;
+
+}
+#submitButton {
+  position: fixed;
+  top: 420px;
+  right: 650px;
+  font-size: 20px;
+  width: 200px;
+
+  background-color: gray;
+  color: white;
+}
+body {
+  background-image: url('/media/gray.jpg');
+}
+  </style>
+  <script src="front_end.js">
+  </script>
+  <body>
+    <div class="nav-bar">
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/upload">Upload</a></li>
+        <li><a href="/live">Live Speak</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</div>
+  </body>
+  <form method="post" enctype="multipart/form-data" action="upload">
+      {% csrf_token %}
+      <li id="soundFile">{{ form.file }}</li>
+{#    <input type="file" id = "soundFile">#}
+      <input type="submit" id="submitButton">
+  </form>
+
+</html>
